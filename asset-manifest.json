@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ainurmurmur/to-do-list.git/static/css/main.6f01a9bf.chunk.css",
+    "main.js": "/ainurmurmur/to-do-list.git/static/js/main.17239bff.chunk.js",
+    "main.js.map": "/ainurmurmur/to-do-list.git/static/js/main.17239bff.chunk.js.map",
+    "runtime-main.js": "/ainurmurmur/to-do-list.git/static/js/runtime-main.8474f947.js",
+    "runtime-main.js.map": "/ainurmurmur/to-do-list.git/static/js/runtime-main.8474f947.js.map",
+    "static/js/2.199a0260.chunk.js": "/ainurmurmur/to-do-list.git/static/js/2.199a0260.chunk.js",
+    "static/js/2.199a0260.chunk.js.map": "/ainurmurmur/to-do-list.git/static/js/2.199a0260.chunk.js.map",
+    "index.html": "/ainurmurmur/to-do-list.git/index.html",
+    "precache-manifest.048ca2bb45182e4d6e57028f0c9b1122.js": "/ainurmurmur/to-do-list.git/precache-manifest.048ca2bb45182e4d6e57028f0c9b1122.js",
+    "service-worker.js": "/ainurmurmur/to-do-list.git/service-worker.js",
+    "static/css/main.6f01a9bf.chunk.css.map": "/ainurmurmur/to-do-list.git/static/css/main.6f01a9bf.chunk.css.map",
+    "static/js/2.199a0260.chunk.js.LICENSE.txt": "/ainurmurmur/to-do-list.git/static/js/2.199a0260.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8474f947.js",
+    "static/js/2.199a0260.chunk.js",
+    "static/css/main.6f01a9bf.chunk.css",
+    "static/js/main.17239bff.chunk.js"
+  ]
+}
