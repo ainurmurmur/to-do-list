@@ -3,6 +3,7 @@ const ADD_POST ="ADD_POST"
 const CHANGE_TO_DONE = 'CHANGE_TO_DONE'
 const CHANGE_INDEX ='CHANGE_INDEX'
 const REMOVE_TODO ='REMOVE_TODO'
+const UPDATE_POST ='UPDATE_POST'
 
 let initialState = {
 
@@ -10,17 +11,20 @@ let initialState = {
             {idOfPost: 2, postInList:"Cooking", done: false}],
     
 }
-    
+
 let ListReducer = (state = initialState, action) => {
     switch(action.type) {
 
         case ADD_POST: {
             let newPost = {
-                idOfPost: action.id, 
+                idOfPost: 3, 
                 postInList:action.newPostText, 
                 done: false
             }
             return {...state, lists:[...state.lists, newPost] };
+        }
+        case UPDATE_POST: {
+            return {...state, newPostText: action.newPostText };
         }
         case REMOVE_TODO: {
             //return state.lists.filter(newList => newList.idOfPost !== action.id)

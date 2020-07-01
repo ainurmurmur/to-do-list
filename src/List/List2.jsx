@@ -1,14 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import style from './List.module.css'
-import { Field, reduxForm, submit } from 'redux-form'
-import cn from 'classnames'
 import ListMaping from './ListMaping'
-import PropTypes from 'prop-types'
-import {required} from 'redux-form-validators'
-import { reset } from "redux-form";
 
 
-let ListForm = (props) => {
+
+
+let ListTwo = (props) => {
 
 
   
@@ -25,30 +22,43 @@ let ListForm = (props) => {
                   />
     </div>
   );
-        
- 
+  //let newPostElement = React.createRef();
+  let onChange = (e) => {
+        let newPostText= e.target.value;
+        props.updateText(newPostText)
+      } ;
+
+  let onClick =() => {
+    //let newPostText= e.target.value;
+    props.addPostToList()
+  }   
+ // ref={newPostElement}
+  //onChange={onChange}  
+  //onChange={(e) =>onChange(e)}
   //<form onSubmit={e => this.onSubmit(e, patient._id)}>
-  const { handleSubmit} = props
+  //const { handleSubmit} = props
+
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <div>
         <label className={style.label}>Tasks to do:</label>
 
         {postsElement}
 
-        <Field name={"newPostText"} component={"input"} type={"text"} validate={[required()]} className={style.input} placeholder={'Your task'}/>
+        <input  onChange={onChange}  value={props.newPostText}  className={style.input} placeholder={'Your task'}/>
       </div>
-      <button type={"submit"}  className={style.submit}>Add Item</button>
+      <button onClick={onClick} className={style.submit}>Add Item</button>
     </form>
   )
 }
+//(e) => onClick(props.idOfPost, e)
 
-let List = reduxForm({
-  form: 'newPostText'
-})(ListForm)
+// let List = reduxForm({
+//   form: 'newPostText'
+// })(ListForm)
 
 
-export default List;
+export default ListTwo;
 //let classes = [];
 
   // let setChecked = ({ target: { checked } } )=> {

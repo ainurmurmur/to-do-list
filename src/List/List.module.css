@@ -6,16 +6,36 @@
     border: solid 1px gainsboro;
     border-radius: 1px;
     margin-bottom: 1px;
-    background-color: ghostwhite;
+    background-color: rgba(35, 35, 211, 0.15);
     justify-content: space-between;
     border-radius: 10%;  
 }
 .label{
-    color:black;
+    color:rgb(21, 59, 148);
     text-transform: italic;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-transform: capitalize ;
+    font-style: oblique;
+    font-weight: bold;
 
+
+}
+
+.input{
+    width: 80%;
+    padding: 15px 22px;
+    margin: 10px 5px;
+    box-sizing: border-box; 
+    align-self: center; 
+}
+.submit{
+    background-color:blue;
+    border: none;
+    color: white;
+    padding: 18px 36px;
+    text-decoration: none;
+    margin: 5px 4px;
+    cursor: pointer;  
 }
 .span{
     display: flex;
@@ -26,6 +46,8 @@
 .ul {
     list-style-type: none;
     text-align: left;
+    padding-inline-start: 0px;
+
 }
 .checkbox {
 
@@ -61,5 +83,6 @@
     /* font-family: "Times New Roman", Times, serif; */
     font-family: Georgia, 'Times New Roman', Times, serif;
     word-wrap: normal;
+    
     
 }
