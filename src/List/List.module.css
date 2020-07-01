@@ -1,0 +1,65 @@
+.li {
+    color:black;
+    display:  flex;
+    align-items: center;
+    padding: .5rem 1rem;
+    border: solid 1px gainsboro;
+    border-radius: 1px;
+    margin-bottom: 1px;
+    background-color: ghostwhite;
+    justify-content: space-between;
+    border-radius: 10%;  
+}
+.label{
+    color:black;
+    text-transform: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: capitalize ;
+
+}
+.span{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+.ul {
+    list-style-type: none;
+    text-align: left;
+}
+.checkbox {
+
+    width: 25px;
+	height: 25px;
+	margin-right:5px;
+	position: relative;
+	transition: 0.1s;
+    transition-delay: 0.3s;
+}
+
+.done {
+    text-decoration: line-through;
+}
+.delete{
+    margin-left: 0;
+    margin-right: auto;
+    margin: 10px;
+    position: relative;
+    background: red ;
+    border-radius: 30%;
+    border: none;
+    color: white;
+
+}
+.index{
+    padding: 1px;
+    margin: 10px;
+    text-shadow: 1px 1px 3px gray;
+}
+.post {
+    text-emphasis: none;
+    /* font-family: "Times New Roman", Times, serif; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    word-wrap: normal;
+    
+}
