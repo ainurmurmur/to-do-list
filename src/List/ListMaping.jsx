@@ -32,7 +32,7 @@ let ListMaping = ({ index, ...props }) => {
       <div className={style.index}>{ index + 1}</div>
       <div className={style.post}>{props.post}</div>
       </span>
-      <button className={style.delete} onClick={()=>removeToDo(props.id)}>&times;</button>
+      <button className={style.delete} onClick={()=>removeToDo(props.id)} type={'button'}>&times;</button>
   
     </li>
    
