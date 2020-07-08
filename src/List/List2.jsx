@@ -108,9 +108,9 @@ export default ListTwo;
   // props.lists.map((checkedPost) => (  {checkedPost.done} );
 
 
- {/* <span>{index+1}</span> */}
-  {/* onChange={props.lists.idOfPost}/> */}
-            {/* <IndexFromSpan index={index}/> */}
+ /* <span>{index+1}</span> */
+  /* onChange={props.lists.idOfPost}/> */
+            /* <IndexFromSpan index={index}/> */
   // let IndexFromSpan =({index}) => {
   //   return (<span>{index+1}</span>)
   // }

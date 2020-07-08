@@ -1,11 +1,8 @@
 import React from 'react';
 import List from './List'
-import ListTwo from './List2'
 import { addPostToList, changeToDone, changeIndex, removeToDoAC } from '../BLL/ListReducer'
 import { connect } from 'react-redux'
 import { reset } from "redux-form"
-// import { withRouter } from 'react-router-dom';
-// import {compose} from 'redux'
 
 
 export const ListContainer = (props) => {
@@ -17,6 +14,7 @@ export const ListContainer = (props) => {
     props.addPostToList(values.newPostText)
     dispatch(reset('newPostText'));
   }
+
   
 
   return <List lists={props.lists} addPostToList={props.addPostToList} changeIndex={props.changeIndex}

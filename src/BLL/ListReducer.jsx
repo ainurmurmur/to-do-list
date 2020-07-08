@@ -17,7 +17,7 @@ let ListReducer = (state = initialState, action) => {
 
         case ADD_POST: {
             let newPost = {
-                idOfPost: 3, 
+                idOfPost: state.lists.length + 1, 
                 postInList:action.newPostText, 
                 done: false
             }
@@ -27,8 +27,10 @@ let ListReducer = (state = initialState, action) => {
             return {...state, newPostText: action.newPostText };
         }
         case REMOVE_TODO: {
+            console.log(action.id)
             //return state.lists.filter(newList => newList.idOfPost !== action.id)
            return {...state, lists:[...state.lists.filter(newList => newList.idOfPost !== action.id)]};
+          
         }
 
         default: 

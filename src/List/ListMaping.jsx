@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import style from './List.module.css'
 import cn from 'classnames'
-import PropTypes from 'prop-types'
-import { reset } from "redux-form";
 
 let ListMaping = ({ index, ...props }) => {
 
@@ -12,16 +10,7 @@ let ListMaping = ({ index, ...props }) => {
     Checked(e.target.checked)
     console.log(notChecked)
   }
-  const setCheckedId = (id) => {
-    props.changeToDone(id)
-    //console.log(id);
-  }
-  const setId =(index) => {
-    props.changeIndex(index)
-  }
-  const MyNewFunc = (isDone) => {
-    let doneOrNor = isDone
-  }
+
   const removeToDo =(id) => {
     props.removeToDoAC(id)
   }
@@ -39,8 +28,8 @@ let ListMaping = ({ index, ...props }) => {
         onChange={(e) => { setChecked(e) }}
 
       />
-     
-      <div className={style.index}>{props.id = index + 1}</div>
+
+      <div className={style.index}>{ index + 1}</div>
       <div className={style.post}>{props.post}</div>
       </span>
       <button className={style.delete} onClick={()=>removeToDo(props.id)}>&times;</button>

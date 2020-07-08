@@ -1,11 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import style from './List.module.css'
-import { Field, reduxForm, submit } from 'redux-form'
-import cn from 'classnames'
+import { Field, reduxForm} from 'redux-form'
 import ListMaping from './ListMaping'
-import PropTypes from 'prop-types'
 import {required} from 'redux-form-validators'
-import { reset } from "redux-form";
 
 
 let ListForm = (props) => {
@@ -28,7 +25,7 @@ let ListForm = (props) => {
         
  
   //<form onSubmit={e => this.onSubmit(e, patient._id)}>
-  const { handleSubmit} = props
+  const { handleSubmit } = props
   return (
     <form onSubmit={handleSubmit}>
       <div>
@@ -38,7 +35,7 @@ let ListForm = (props) => {
 
         <Field name={"newPostText"} component={"input"} type={"text"} validate={[required()]} className={style.input} placeholder={'Your task'}/>
       </div>
-      <button type={"submit"}  className={style.submit}>Add Item</button>
+      <button type={"submit"}  className={style.submit} >Add Item</button>
     </form>
   )
 }
@@ -98,9 +95,9 @@ export default List;
   // props.lists.map((checkedPost) => (  {checkedPost.done} );
 
 
- {/* <span>{index+1}</span> */}
-  {/* onChange={props.lists.idOfPost}/> */}
-            {/* <IndexFromSpan index={index}/> */}
+ /* <span>{index+1}</span> */
+  /* onChange={props.lists.idOfPost}/> */
+            /* <IndexFromSpan index={index}/> */
   // let IndexFromSpan =({index}) => {
   //   return (<span>{index+1}</span>)
   // }
