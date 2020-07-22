@@ -20,6 +20,9 @@
     margin-top: 10px;
     box-shadow: 1px 1px 3px rgba(189, 47, 75, 0.3);
 }
+.logo {
+     height: 150px;
+}
 .label{
     color:rgb(107, 4, 4);
     /* text-transform: italic; */

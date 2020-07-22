@@ -4,6 +4,7 @@ import { Field, reduxForm} from 'redux-form'
 import ListMaping from './ListMaping'
 import {ButtonStyled} from '../Common/StylesMaterial'
 import {TextFieldStyled} from '../Common/StylesMaterial'
+import logo from '../Common/mylogos.png'
 
 
 const renderTextField = ({label,input, meta: { touched, invalid, error }, ...custom}) => {
@@ -37,7 +38,9 @@ let ListForm = (props) => {
   const { handleSubmit, submitting, error } = props;
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div>  
+      <div ><img src={logo} alt={'logo'} className={style.logo} /></div> 
+       <form onSubmit={handleSubmit}>
       <div>
         <label className={style.label}>Tasks to do:</label>
         {postsElement}
@@ -50,6 +53,8 @@ let ListForm = (props) => {
       </div>
       <ButtonStyled type="submit" disabled={submitting}>ADD ITEM </ButtonStyled>
     </form>
+    </div>
+
   )
 }
 
