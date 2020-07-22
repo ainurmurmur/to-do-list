@@ -7,7 +7,7 @@ import {TextFieldStyled} from '../Common/StylesMaterial'
 
 
 const renderTextField = ({label,input, meta: { touched, invalid, error }, ...custom}) => {
-  return <TextFieldStyled
+  return (<TextFieldStyled
      label={label}
      placeholder={label}
      error={touched && invalid}
@@ -15,6 +15,8 @@ const renderTextField = ({label,input, meta: { touched, invalid, error }, ...cus
      {...input}
      {...custom}
    />
+   
+   )
    
  }
 
@@ -32,7 +34,7 @@ let ListForm = (props) => {
     </div>
   );
         
-  const { handleSubmit } = props;
+  const { handleSubmit, submitting, error } = props;
 
   return (
     <form onSubmit={handleSubmit}>
@@ -40,11 +42,13 @@ let ListForm = (props) => {
         <label className={style.label}>Tasks to do:</label>
         {postsElement}
 
+       
+
       <Field component={renderTextField}  name={"newPostText"} 
-      id='custom-css-standard-input' label={'Your task'} />
-     
+      id='custom-css-standard-input' label={'Your task'}  />
+      
       </div>
-      <ButtonStyled type="submit">ADD ITEM </ButtonStyled>
+      <ButtonStyled type="submit" disabled={submitting}>ADD ITEM </ButtonStyled>
     </form>
   )
 }

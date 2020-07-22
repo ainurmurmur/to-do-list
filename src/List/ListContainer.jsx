@@ -11,7 +11,7 @@ export const ListContainer = (props) => {
 
   let submit = (values, dispatch, ) => {
 
-    props.addPostToList(values.newPostText)
+    {values.newPostText && props.addPostToList(values.newPostText)}
     dispatch(reset('newPostText'));
   }
 
