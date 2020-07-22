@@ -2,16 +2,25 @@ import React from 'react';
 import style from './List.module.css'
 import { Field, reduxForm} from 'redux-form'
 import ListMaping from './ListMaping'
-import {required} from 'redux-form-validators'
+import {ButtonStyled} from '../Common/StylesMaterial'
+import {TextFieldStyled} from '../Common/StylesMaterial'
 
+
+const renderTextField = ({label,input, meta: { touched, invalid, error }, ...custom}) => {
+  return <TextFieldStyled
+     label={label}
+     placeholder={label}
+     error={touched && invalid}
+     helperText={touched && error}
+     {...input}
+     {...custom}
+   />
+   
+ }
 
 let ListForm = (props) => {
-
-
+ 
   
-  
-//(e) => {setChecked(e);
-
   let postsElement = props.lists.map((p,index) =>
     
     
@@ -23,29 +32,33 @@ let ListForm = (props) => {
     </div>
   );
         
- 
-  //<form onSubmit={e => this.onSubmit(e, patient._id)}>
-  const { handleSubmit } = props
+  const { handleSubmit } = props;
+
   return (
     <form onSubmit={handleSubmit}>
       <div>
         <label className={style.label}>Tasks to do:</label>
-
         {postsElement}
 
-        <Field name={"newPostText"} component={"input"} type={"text"} validate={[required()]} className={style.input} placeholder={'Your task'}/>
+      <Field component={renderTextField}  name={"newPostText"} 
+      id='custom-css-standard-input' label={'Your task'} />
+     
       </div>
-      <button type={"submit"}  className={style.submit} >Add Item</button>
+      <ButtonStyled type="submit">ADD ITEM </ButtonStyled>
     </form>
   )
 }
 
 let List = reduxForm({
-  form: 'newPostText'
+  form: 'newPostText',
 })(ListForm)
 
 
 export default List;
+
+
+
+ //<form onSubmit={e => this.onSubmit(e, patient._id)}>
 //let classes = [];
 
   // let setChecked = ({ target: { checked } } )=> {

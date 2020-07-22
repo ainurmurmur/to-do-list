@@ -7,14 +7,8 @@ import ListMaping from './ListMaping'
 
 let ListTwo = (props) => {
 
-
-  
-  
-//(e) => {setChecked(e);
-
   let postsElement = props.lists.map((p,index) =>
-    
-    
+      
     <div key={p.idOfPost}  >
       <ListMaping index={index} post={p.postInList} id={p.idOfPost} 
                   done={p.done} changeToDone={props.changeToDone}
@@ -22,22 +16,16 @@ let ListTwo = (props) => {
                   />
     </div>
   );
-  //let newPostElement = React.createRef();
+  
   let onChange = (e) => {
         let newPostText= e.target.value;
         props.updateText(newPostText)
       } ;
 
   let onClick =() => {
-    //let newPostText= e.target.value;
     props.addPostToList()
   }   
- // ref={newPostElement}
-  //onChange={onChange}  
-  //onChange={(e) =>onChange(e)}
-  //<form onSubmit={e => this.onSubmit(e, patient._id)}>
-  //const { handleSubmit} = props
-
+ 
   return (
     <form>
       <div>
@@ -45,20 +33,23 @@ let ListTwo = (props) => {
 
         {postsElement}
 
-        <input  onChange={onChange}  value={props.newPostText}  className={style.input} placeholder={'Your task'}/>
+        <input  onChange={onChange}  value={props.newPostText}  className={style.input}
+         placeholder={'Your task'}/>
       </div>
       <button onClick={onClick} className={style.submit}>Add Item</button>
     </form>
   )
 }
-//(e) => onClick(props.idOfPost, e)
-
-// let List = reduxForm({
-//   form: 'newPostText'
-// })(ListForm)
 
 
 export default ListTwo;
+
+
+
+  
+//(e) => {setChecked(e);
+
+//let newPostElement = React.createRef();
 //let classes = [];
 
   // let setChecked = ({ target: { checked } } )=> {
@@ -66,7 +57,7 @@ export default ListTwo;
   //   console.log(notChecked, checked);
   
   // };
-
+//let newPostText= e.target.value;
   // const [checked, setChecked] = useState(true);
   // return (
   //   <div>
@@ -86,7 +77,17 @@ export default ListTwo;
 //   Checked(checked);
 //   console.log(notChecked, checked);
   
+// ref={newPostElement}
+  //onChange={onChange}  
+  //onChange={(e) =>onChange(e)}
+  //<form onSubmit={e => this.onSubmit(e, patient._id)}>
+  //const { handleSubmit} = props
 
+//(e) => onClick(props.idOfPost, e)
+
+// let List = reduxForm({
+//   form: 'newPostText'
+// })(ListForm)
 
 
 // return <span className={ cn({[classes.selectedPage]:props.currentPage === p},classes.pageNumber ) } onClick={(e) => { props.onPageChange(p) } }>{p}</span>

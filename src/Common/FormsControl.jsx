@@ -4,6 +4,7 @@ import { Field } from 'redux-form';
 
 
 
+
 export const FormControl = ({ input, meta, child, ...props }) => {
 
     const hasError = meta.touched && meta.error;
@@ -13,7 +14,7 @@ export const FormControl = ({ input, meta, child, ...props }) => {
             <div>
                 {props.children}
             </div>
-            {hasError && <span>{meta.error}</span>}
+            {hasError && <span className={classes.formControlSpan}>{meta.error}</span>}
         </div>
     )
 }
@@ -32,6 +33,6 @@ export const Input = (props) => {
 
 export const createField = (name, placeholder, component, validates, props={}, text="") => (
     <div>
-        <Field name={name} placeholder={placeholder} component={component} validate={validates} {...props}/> {text}
+        <Field  name={name} placeholder={placeholder} component={component} validate={validates} className={props.classname} {...props}/> {text}
     </div>
 )

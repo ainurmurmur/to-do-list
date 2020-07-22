@@ -29,5 +29,7 @@ let mapStateToProps = (state) => ({
   newPostText: state.toDoList.newPostText
 })
 
-export default connect(mapStateToProps, { addPostToList, changeToDone, changeIndex, removeToDoAC })(ListContainer)
-//onSubmit={onSubmit}
+export default connect(mapStateToProps, 
+  { addPostToList, changeToDone, changeIndex, removeToDoAC })
+(ListContainer)
+

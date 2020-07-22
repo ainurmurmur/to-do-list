@@ -1,22 +1,35 @@
 .li {
-    color:black;
+    color:rgb(107, 4, 4);
     display:  flex;
     align-items: center;
     padding: .5rem 1rem;
-    border: solid 1px gainsboro;
+    /* border: solid 1px rgb(177, 0, 0); */
     border-radius: 1px;
     margin-bottom: 1px;
-    background-color: rgba(35, 35, 211, 0.15);
+    /* background-color: rgba(35, 35, 211, 0.15); */
+    background-color: rgb(251, 251, 251);
     justify-content: space-between;
     border-radius: 10%;  
 }
+.ul {
+    list-style-type: none;
+    text-align: left;
+    padding-inline-start: 0px;
+    background-color: rgb(251, 251, 251);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
 .label{
-    color:rgb(21, 59, 148);
-    text-transform: italic;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:rgb(107, 4, 4);
+    /* text-transform: italic; */
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-family: monospace;
     text-transform: capitalize ;
-    font-style: oblique;
+    /* font-style: oblique; */
     font-weight: bold;
+    font-size: 30px;
+    margin: 25px;
+
 
 
 }
@@ -43,21 +56,6 @@
     justify-content: space-between;
     align-items: center;
 }
-.ul {
-    list-style-type: none;
-    text-align: left;
-    padding-inline-start: 0px;
-
-}
-.checkbox {
-
-    width: 25px;
-	height: 25px;
-	margin-right:5px;
-	position: relative;
-	transition: 0.1s;
-    transition-delay: 0.3s;
-}
 
 .done {
     text-decoration: line-through;
@@ -75,14 +73,15 @@
 }
 .index{
     padding: 1px;
-    margin: 10px;
-    text-shadow: 1px 1px 3px gray;
+    margin: 7px;
+    text-shadow: 1px 1px 3px rgba(189, 47, 75, 0.3);
+    margin-bottom: 3px;
+    margin-top: 0px;
 }
 .post {
     text-emphasis: none;
-    /* font-family: "Times New Roman", Times, serif; */
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: monospace;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
     word-wrap: normal;
-    
-    
+    margin: 10px;
 }

@@ -1,39 +1,43 @@
 import React, { useState } from 'react';
 import style from './List.module.css'
 import cn from 'classnames'
+import IconButton from '@material-ui/core/IconButton';
+import {ButtonDeleteStyled} from '../Common/StylesMaterial'
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import 'fontsource-roboto';
 
 let ListMaping = ({ index, ...props }) => {
 
-  let [notChecked, Checked] = useState(false);
+  let [notChecked, Checked] = useState(props.done);
 
   const setChecked = (e) => {
     Checked(e.target.checked)
     console.log(notChecked)
+    // props.changeToDone(props.id)
   }
-
+ 
   const removeToDo =(id) => {
     props.removeToDoAC(id)
   }
-  // console.log(props.id)
-  //(e) => { setChecked(e); setCheckedId(props.id); MyNewFunc(props.done)}
-// {props.addPostActionCreator(props.id)}
+  
   return <>
   
   <ul className={style.ul}>
     <li className={cn(style.li, { [style.done]: notChecked === true })}>
       <span className={style.span}>
-      <input className={style.checkbox}
-        type={"checkbox"}
-        checked={notChecked}
-        onChange={(e) => { setChecked(e) }}
 
-      />
+      <FormControlLabel
+        control={<Checkbox checked={notChecked} onChange={(e) => setChecked(e) }/>}
+        />
 
       <div className={style.index}>{ index + 1}</div>
       <div className={style.post}>{props.post}</div>
       </span>
-      <button className={style.delete} onClick={()=>removeToDo(props.id)} type={'button'}>&times;</button>
-  
+      {/* <button className={style.delete} onClick={()=>removeToDo(props.id)} type={'button'}>&times;</button> */}
+      <IconButton aria-label="delete"  onClick={()=>removeToDo(props.id)}>
+          <ButtonDeleteStyled fontSize="small" />
+        </IconButton>
     </li>
    
   </ul>
@@ -42,6 +46,16 @@ let ListMaping = ({ index, ...props }) => {
 
 export default ListMaping;
 
+
+/* <input className={style.checkbox}
+        type={"checkbox"}
+        checked={notChecked}
+        onChange={(e) => setChecked(e) }
+
+      /> */
+// console.log(props.id)
+  //(e) => { setChecked(e); setCheckedId(props.id); MyNewFunc(props.done)}
+// {props.addPostActionCreator(props.id)}
 
 // let [notChecked, Checked] = useState();
 

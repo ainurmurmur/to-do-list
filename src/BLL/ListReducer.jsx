@@ -27,12 +27,29 @@ let ListReducer = (state = initialState, action) => {
             return {...state, newPostText: action.newPostText };
         }
         case REMOVE_TODO: {
-            console.log(action.id)
-            //return state.lists.filter(newList => newList.idOfPost !== action.id)
+        
            return {...state, lists:[...state.lists.filter(newList => newList.idOfPost !== action.id)]};
           
         }
-
+        // case CHANGE_TO_DONE: {
+            
+        //     if(state.lists[action.id-1]['idOfPost'] === action.id){
+                
+        //       return {...state, lists: [...state.lists[action.id-1]['done'] = true ] };
+        //     }
+        
+        
+        // return  state 
+        //  };
+         // 
+        // case CHANGE_TO_DONE: {
+        //    console.log(state.lists[action.id-1]['idOfPost'])
+        //    console.log(action.id)
+        //     if(state.lists[action.id-1]['idOfPost'] == action.id){
+        //         return state.lists[action.id-1]['done'] = true
+        //     }
+        // }
+     
         default: 
             return state;
     }
@@ -40,14 +57,14 @@ let ListReducer = (state = initialState, action) => {
 //console.log(action.id)
 
 export const addPostToList = (newPostText, id) => ( {type: ADD_POST, newPostText, id} )
-export const changeToDone = (ids) => ( {type: CHANGE_TO_DONE, ids} )
+export const changeToDone = (id) => ( {type: CHANGE_TO_DONE, id} )
 export const changeIndex = (index) => ( {type: CHANGE_INDEX, index} )
 export const removeToDoAC = (id) => ( {type: REMOVE_TODO, id} )
 
  
 export default ListReducer;
 
-
+//return state.lists.filter(newList => newList.idOfPost !== action.id)
  // }
         // case ADD_POST:
         // case CHANGE_TO_DONE:
