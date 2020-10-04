@@ -3,8 +3,6 @@ import classes from './FormsControl.module.css'
 import { Field } from 'redux-form';
 
 
-
-
 export const FormControl = ({ input, meta, child, ...props }) => {
 
     const hasError = meta.touched && meta.error;
@@ -24,15 +22,14 @@ export const Textarea = (props) => {
 
 }
 
-
 export const Input = (props) => {
     const { input, meta,child, ...restProps } = props
     return <FormControl {...props}><input {...input} {...restProps} /></FormControl>
-
 }
 
 export const createField = (name, placeholder, component, validates, props={}, text="") => (
     <div>
-        <Field  name={name} placeholder={placeholder} component={component} validate={validates} className={props.classname} {...props}/> {text}
+        <Field  name={name} placeholder={placeholder} component={component}
+                validate={validates} className={props.classname} {...props}/> {text}
     </div>
 )
