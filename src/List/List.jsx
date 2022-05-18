@@ -25,10 +25,10 @@ let ListForm = (props) => {
     let postsElement = props.lists.map((p, index) =>
 
         <div key={p.idOfPost}>
-            <ListMaping index={index} post={p.postInList} id={p.idOfPost}
-                        done={p.done} changeToDone={props.changeToDone}
+            <ListMaping index={index} post={p.postInList} id={p.idOfPost} checked={p.checked}
                         changeIndex={props.changeIndex} removeToDoAC={props.removeToDoAC}
                         addPostToList={props.addPostToList} updateTask={props.updateTask}
+                        updateStatus={props.updateStatus}
             />
         </div>
     );
