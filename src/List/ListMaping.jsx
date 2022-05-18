@@ -11,10 +11,8 @@ import TextField from '@material-ui/core/TextField';
 
 let ListMaping = ({index, ...props}) => {
 
-    let [notChecked, Checked] = useState(props.done);
-
     const setChecked = (e) => {
-        Checked(e.target.checked)
+        props.updateStatus(e.target.checked, index)
     }
 
     const removeToDo = (id) => {
@@ -47,10 +45,10 @@ let ListMaping = ({index, ...props}) => {
     return <>
 
         <ul className={style.ul}>
-            <li className={cn(style.li, {[style.done]: notChecked === true})}>
+            <li className={cn(style.li, {[style.done]: props.checked === true})}>
       <span className={style.span}>
       <FormControlLabel
-          control={<Checkbox checked={notChecked} onChange={(e) => setChecked(e)}/>}
+          control={<Checkbox checked={props.checked} onChange={(e) => setChecked(e, index)}/>}
       />
       <div className={style.index}>{index + 1}</div>
       <div>
