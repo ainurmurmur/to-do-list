@@ -58,11 +58,11 @@ let ListReducer = (state = initialState, action) => {
         case SET_STATE: {
 
             const new_state = localStorage.getItem('todo')
-            if(new_state == null) {
+            if(JSON.parse(new_state) == null) {
               return initialState
             }
             else{
-                return new_state
+                return JSON.parse(new_state)
             }
         }
         default:
